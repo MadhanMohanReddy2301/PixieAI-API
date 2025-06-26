@@ -12,8 +12,7 @@ import uvicorn
 from semantic_kernel.contents import ChatHistory, ChatMessageContent, AuthorRole
 from semantic_kernel.agents import ChatHistoryAgentThread
 
-from agents.pixie_agent.agent import PixieAgent
-
+from agent import PixieAgent
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 
