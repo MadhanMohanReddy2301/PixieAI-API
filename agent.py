@@ -6,7 +6,6 @@ from semantic_kernel.connectors.ai import FunctionChoiceBehavior
 from semantic_kernel.agents import ChatCompletionAgent, ChatHistoryAgentThread
 from semantic_kernel.connectors.ai.google.google_ai import GoogleAIChatCompletion
 from semantic_kernel.services.kernel_services_extension import DEFAULT_SERVICE_NAME
-from plugins.vector_db import FaissSemanticSearchSkill
 
 load_dotenv()
 chat_completion = GoogleAIChatCompletion(gemini_model_id="gemini-1.5-flash", api_key=os.getenv("GOOGLE_API_KEY"),
