@@ -1,15 +1,18 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "main.py",
-      "use": "@vercel/python"
-    }
+    { "src": "main.py", "use": "@vercel/python" }
   ],
   "routes": [
+    { "src": "/(.*)", "dest": "main.py" }
+  ],
+  "functions": {
+    "main.py": { "maxDuration": 60 }
+  },
+  "crons": [
     {
-      "src": "/(.*)",
-      "dest": "main.py"
+      "path": "/health",
+      "schedule": "*/5 * * * *"
     }
   ]
 }
